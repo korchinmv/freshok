@@ -1,0 +1,12 @@
+body {
+  background-color: #fff;
+  font-size: 14px;
+  line-height: 1.4;
+  @extend %opensans-400;
+}
+
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 15px 0;
+}

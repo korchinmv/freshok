@@ -26,7 +26,7 @@ function styles() {
       grid: true
     }))
     .pipe(dest('app/css'))
-    .pipe(browserSync.reload());
+    .pipe(browserSync.stream());
 }
 
 function scripts() {
