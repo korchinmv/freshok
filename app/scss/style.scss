@@ -3,4 +3,110 @@
 @import "reset";
 @import "global";
 
+.header-top {
+  padding: 15px 0;
+  background-color: $ft-color;
+  font-size: 13px;
+  line-height: 1.4;
+  @extend %opensans-700;
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__item {
+    display: flex;
+  }
+  &__link {
+    text-transform: uppercase;
+    color: $white;
+  }
+  &__link:not(:last-child) {
+    margin-right: 48px;
+  }
+  &__link-wrapper {
+    display: flex;
+    align-items: center;
+  }
+  &__items-list {
+    display: flex;
+  }
+  &__items:not(:last-child) {
+    margin-right: 24px;
+  }
+}
+
+.icon {
+  fill: $white;
+}
+
+.car {
+  width: 32px;
+  height: 21px;
+}
+
+.phone {
+  width: 22px;
+  height: 22px;
+}
+
+.car,
+.phone {
+  margin-right: 12px;
+}
+
+.menu__item {
+  display: none;
+}
+
+.header-bottom {
+  background-color: $accent-color;
+  padding: 30px 0;
+}
+
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-dropdown {
+  background-color: $white;
+  padding: 15px 38px 15px 61px;
+  border-radius: 6px;
+  color: $accent-color;
+  @extend %opensans-600;
+  z-index: 999;
+//   &__item {
+//     width: 240px;
+//     padding: 15px 78px 15px 24px;
+//     border-bottom: solid 1px rgba(193, 193, 193, 0.3);
+//   }
+//   &__link {
+//     font-size: 16px;
+//     line-height: 1.2;
+//     @extend %opensans-400;
+//   }
+// }
+
+.user-nav {
+  display: flex;
+  align-items: center;
+}
+
+.user {
+  width: 25px;
+  height: 32px;
+}
+
+.heart {
+  width: 32px;
+  height: 28px;
+}
+
+.cart {
+  width: 32px;
+  height: 30px;
+}
+
 @import "media";
