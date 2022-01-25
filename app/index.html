@@ -17,7 +17,7 @@
           <div class="header-top__item">
             <a class="header-top__link" href="#">
               <div class="header-top__link-wrapper">
-                <svg class="icon car">
+                <svg class="icon-car">
                   <use xlink:href="images/sprite.svg#icon-del-address"></use>
                 </svg>
                 <p>Адрес и время доставки</p>
@@ -25,7 +25,7 @@
             </a>
             <a class="header-top__link" href="#">
               <div class="header-top__link-wrapper">
-                <svg class="icon phone">
+                <svg class="icon-phone">
                   <use xlink:href="images/sprite.svg#icon-tel"></use>
                 </svg>
                 <p>Горячая линия 24/7</p>
@@ -52,45 +52,59 @@
           <a class="logo" href="#">
             <img class="logo__img" src="/images/logo.svg" alt="Логотип интернет магазина ФрешОК">
           </a>
-          <ul class="menu-dropdown">Каталог продуктов
-            <li class="menu-dropdown__item">
-              <a class="menu-dropdown__link" href="#">Овощи и фрукты</a>
-            </li>
-            <li class="menu-dropdown__item">
-              <a class="menu-dropdown__link" href="#">Бакалея</a>
-            </li>
-            <li class="menu-dropdown__item">
-              <a class="menu-dropdown__link" href="#">Молочные продукты</a>
-            </li>
-            <li class="menu-dropdown__item">
-              <a class="menu-dropdown__link" href="#">Хлеб</a>
-            </li>
-            <li class="menu-dropdown__item">
-              <a class="menu__link" href="#">Мясо</a>
-            </li>
-            <li class="menu-dropdown__item">
-              <a class="menu-dropdown__link" href="#">Колбаса</a>
-            </li>
-            <li class="menu-dropdown__item">
-              <a class="menu-dropdown__link" href="#">Рыба</a>
-            </li>
-            <li class="menu-dropdown__item">
-              <a class="menu-dropdown__link" href="#">Алкоголь</a>
-            </li>
-            <li class="menu-dropdown__item">
-              <a class="menu__link" href="#">Напитки</a>
-            </li>
-            <li class="menu-dropdown__item">
-              <a class="menu__link" href="#">Торты</a>
-            </li>
-            <li class="menu-dropdown__item">
-              <a class="menu-dropdown__link" href="#">Мясо</a>
-            </li>
-            <li class="menu-dropdown__item">
-              <a class="menu-dropdown__link" href="#">Чай, кофе</a>
+          <ul class="menu">
+            <li class="menu__item">
+              <svg class="icon-nav">
+                <use xlink:href="images/sprite.svg#icon-nav"></use>
+              </svg>
+              Каталог продуктов
+              <svg class="icon-arow-menu">
+                <use xlink:href="images/sprite.svg#icon-arow-menu"></use>
+              </svg>
+              <ul class="submenu">
+                <li class="submenu__item">
+                  <a class="submenu__link" href="#">Овощи и фрукты</a>
+                </li>
+                <li class="submenu__item">
+                  <a class="submenu__link" href="#">Бакалея</a>
+                </li>
+                <li class="submenu__item">
+                  <a class="submenu__link" href="#">Молочные продукты</a>
+                </li>
+                <li class="submenu__item">
+                  <a class="submenu__link" href="#">Хлеб</a>
+                </li>
+                <li class="submenu__item">
+                  <a class="submenu__link" href="#">Мясо</a>
+                </li>
+                <li class="submenu__item">
+                  <a class="submenu__link" href="#">Колбаса</a>
+                </li>
+                <li class="submenu__item">
+                  <a class="submenu__link" href="#">Рыба</a>
+                </li>
+                <li class="submenu__item">
+                  <a class="submenu__link" href="#">Алкоголь</a>
+                </li>
+                <li class="submenu__item">
+                  <a class="submenu__link" href="#">Напитки</a>
+                </li>
+                <li class="submenu__item">
+                  <a class="submenu__link" href="#">Торты</a>
+                </li>
+                <li class="submenu__item">
+                  <a class="submenu__link" href="#">Мясо</a>
+                </li>
+                <li class="submenu__item">
+                  <a class="submenu__link" href="#">Чай, кофе</a>
+                </li>
+              </ul>
             </li>
           </ul>
-          <form class="search" action="form" method="GET" enctype="multipart/form-data">
+          <form class="form-search" action="form" method="GET" enctype="multipart/form-data">
+            <svg class="icon-search">
+              <use xlink:href="images/sprite.svg#icon-search"></use>
+            </svg>
             <input class="search__field" type="text" name="searh-field" id="searh-field"
               placeholder="Найти в магазине ...">
             <button class="search--btn" type="button">Поиск</button>
@@ -98,14 +112,14 @@
           <ul class="user-nav">
             <li class="user-nav__item">
               <a class="user-nav__link" href="#">
-                <svg class="icon user">
+                <svg class="icon-user">
                   <use xlink:href="images/sprite.svg#icon-user"></use>
                 </svg>
               </a>
             </li>
             <li class="user-nav__item">
               <a class="user-nav__link" href="#">
-                <svg class="icon heart">
+                <svg class="icon-heart">
                   <use xlink:href="images/sprite.svg#icon-heart"></use>
                 </svg>
                 <span class="user-nav__num">4</span>
@@ -113,7 +127,7 @@
             </li>
             <li class="user-nav__item">
               <a class="user-nav__link" href="#">
-                <svg class="icon cart">
+                <svg class="icon-cart">
                   <use xlink:href="images/sprite.svg#icon-cart"></use>
                 </svg>
                 <span class="user-nav__num">5</span>
@@ -124,7 +138,33 @@
       </div>
     </div>
   </header>
-
+  <main>
+    <section class="hero">
+      <div class="hero-slider">
+        <div class="hero-slider__item" style="background-image: url('images/background/hero-slide-1.jpg');">
+          <h1 class="title">Свежачок вам в хату</h1>
+          <span class="subtitle">Скидка -50%</span>
+          <div class="text-promo">
+            <p>Только с 7 по 13 июля скидка на сезонные фрукты и овощи до 50%. Торопитесь!</p>
+          </div>
+          <a class="green-btn" href="#">Купить сейчас</a>
+        </div>
+        <div class="hero-slider__item" style="background-image: url('images/background/hero-slide-2.jpg');">
+          <h1 class="title">Накрути себе томатов</h1>
+          <span class="subtitle">Акция: 3 кг по цене 1</span>
+          <div class="text-promo">
+            <p>Только с 12 по 15 июля скидка на домашние помидорчики</p>
+          </div>
+          <a class="green-btn" href="#">Купить сейчас</a>
+        </div>
+        <div class="hero-slider__item" style="background-image: url('images/background/hero-slide-3.jpg');">
+          <h1 class="title">Пусть остальные позеленеют от зависти</h1>
+          <span class="subtitle">Распродажа зелени</span>
+          <a class="green-btn" href="#">Купить сейчас</a>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <script src="js/main.min.js"></script>
 </body>
