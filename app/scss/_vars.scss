@@ -67,3 +67,24 @@ $grey: #c1c1c1;
 $bg-menu: #e0edcf;
 
 $red: #cf3e3b;
+
+$hero-block: rgba(255, 255, 255, 0.8);
+
+$hero-title-color: #505050;
+
+$hero-info-bg: #f6f6f6;
+
+$hero-title: #121212;
+
+$placeholder-color: #4f4f4f;
+
+//ELEMENTS//
+
+%green-btn {
+  font-size: 18px;
+  line-height: 1.3;
+  color: $white;
+  background-color: $accent-color;
+  padding: 12px 24px;
+  border-radius: 6px;
+}
