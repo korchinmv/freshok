@@ -16,7 +16,7 @@
       <div class="container">
         <div class="header-top__wrapper">
           <div class="header-top__item">
-            <a class="header-top__link" href="#">
+            <a class="header-top__link animation-link" href="#">
               <div class="header-top__link-wrapper">
                 <svg class="icon-car">
                   <use xlink:href="images/sprite.svg#icon-del-address"></use>
@@ -24,7 +24,7 @@
                 <p>Адрес и время доставки</p>
               </div>
             </a>
-            <a class="header-top__link" href="#">
+            <a class="header-top__link animation-link" href="#">
               <div class="header-top__link-wrapper">
                 <svg class="icon-phone">
                   <use xlink:href="images/sprite.svg#icon-tel"></use>
@@ -35,13 +35,13 @@
           </div>
           <ul class="header-top__items-list">
             <li class="header-top__items">
-              <a class="header-top__link" href="#">Доставка</a>
+              <a class="header-top__link animation-link" href="#">Доставка</a>
             </li>
             <li class="header-top__items">
-              <a class="header-top__link" href="#">О нас</a>
+              <a class="header-top__link animation-link" href="#">О нас</a>
             </li>
             <li class="header-top__items">
-              <a class="header-top__link" href="#">Новости</a>
+              <a class="header-top__link animation-link" href="#">Новости</a>
             </li>
           </ul>
         </div>
@@ -50,66 +50,65 @@
     <div class="header-bottom">
       <div class="container">
         <nav class="header__nav">
-          <a class="logo" href="#">
+          <a class="logo animation-link" href="#">
             <img class="logo__img" src="/images/logo.svg" alt="Логотип интернет магазина ФрешОК">
           </a>
+
           <ul class="menu">
-            <li class="menu__item">
-              <svg class="icon-nav">
-                <use xlink:href="images/sprite.svg#icon-nav"></use>
-              </svg>
+            <!-- Не смог сделать исчезновение меню при клике мышкой по области страницы и состояние кнопки при когда она открыта  -->
+            <button class="menu__btn">
               Каталог продуктов
-              <svg class="icon-arow-menu">
-                <use xlink:href="images/sprite.svg#icon-arow-menu"></use>
-              </svg>
-              <ul class="submenu">
-                <li class="submenu__item">
-                  <a class="submenu__link" href="#">Овощи и фрукты</a>
-                </li>
-                <li class="submenu__item">
-                  <a class="submenu__link" href="#">Бакалея</a>
-                </li>
-                <li class="submenu__item">
-                  <a class="submenu__link" href="#">Молочные продукты</a>
-                </li>
-                <li class="submenu__item">
-                  <a class="submenu__link" href="#">Хлеб</a>
-                </li>
-                <li class="submenu__item">
-                  <a class="submenu__link" href="#">Мясо</a>
-                </li>
-                <li class="submenu__item">
-                  <a class="submenu__link" href="#">Колбаса</a>
-                </li>
-                <li class="submenu__item">
-                  <a class="submenu__link" href="#">Рыба</a>
-                </li>
-                <li class="submenu__item">
-                  <a class="submenu__link" href="#">Алкоголь</a>
-                </li>
-                <li class="submenu__item">
-                  <a class="submenu__link" href="#">Напитки</a>
-                </li>
-                <li class="submenu__item">
-                  <a class="submenu__link" href="#">Торты</a>
-                </li>
-                <li class="submenu__item">
-                  <a class="submenu__link" href="#">Мясо</a>
-                </li>
-                <li class="submenu__item">
-                  <a class="submenu__link" href="#">Чай, кофе</a>
-                </li>
-              </ul>
-            </li>
+            </button>
+
+            <ul class="submenu">
+              <li class="submenu__item">
+                <a class="submenu__link" href="#">Овощи и фрукты</a>
+              </li>
+              <li class="submenu__item">
+                <a class="submenu__link" href="#">Бакалея</a>
+              </li>
+              <li class="submenu__item">
+                <a class="submenu__link" href="#">Молочные продукты</a>
+              </li>
+              <li class="submenu__item">
+                <a class="submenu__link" href="#">Хлеб</a>
+              </li>
+              <li class="submenu__item">
+                <a class="submenu__link" href="#">Мясо</a>
+              </li>
+              <li class="submenu__item">
+                <a class="submenu__link" href="#">Колбаса</a>
+              </li>
+              <li class="submenu__item">
+                <a class="submenu__link" href="#">Рыба</a>
+              </li>
+              <li class="submenu__item">
+                <a class="submenu__link" href="#">Алкоголь</a>
+              </li>
+              <li class="submenu__item">
+                <a class="submenu__link" href="#">Напитки</a>
+              </li>
+              <li class="submenu__item">
+                <a class="submenu__link" href="#">Торты</a>
+              </li>
+              <li class="submenu__item">
+                <a class="submenu__link" href="#">Мясо</a>
+              </li>
+              <li class="submenu__item">
+                <a class="submenu__link" href="#">Чай, кофе</a>
+              </li>
+            </ul>
           </ul>
+
           <form class="form-search" action="form" method="GET" enctype="multipart/form-data">
             <svg class="icon-search">
               <use xlink:href="images/sprite.svg#icon-search"></use>
             </svg>
             <input class="search__field" type="text" name="searh-field" id="searh-field"
               placeholder="Найти в магазине ...">
-            <button class="search--btn" type="button">Поиск</button>
+            <button class="search__btn" type="button">Поиск</button>
           </form>
+
           <ul class="user-nav">
             <li class="user-nav__item">
               <a class="user-nav__link" href="#">
