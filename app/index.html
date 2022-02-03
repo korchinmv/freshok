@@ -106,7 +106,7 @@
             </svg>
             <input class="search__field" type="text" name="searh-field" id="searh-field"
               placeholder="Найти в магазине ...">
-            <button class="search__btn" type="button">Поиск</button>
+            <button class="search__btn animation-btn" type="button">Поиск</button>
           </form>
 
           <ul class="user-nav">
@@ -149,7 +149,7 @@
             <div class="hero-slider__text">
               <p>Только с 7 по 13 июля скидка на сезонные фрукты и овощи до 50%. Торопитесь!</p>
             </div>
-            <a class="hero-slider__btn" href="#">Купить сейчас</a>
+            <a class="hero-slider__btn animation-btn--green" href="#">Купить сейчас</a>
           </div>
         </div>
         <div class="hero-slider__item" style="background-image: url('images/background/hero-slide-2.jpg');">
@@ -160,7 +160,7 @@
             <div class="hero-slider__text">
               <p>Только с 12 по 15 июля скидка на домашние помидорчики</p>
             </div>
-            <a class="hero-slider__btn" href="#">Купить сейчас</a>
+            <a class="hero-slider__btn animation-btn--green" href="#">Купить сейчас</a>
           </div>
         </div>
         <div class="hero-slider__item" style="background-image: url('images/background/hero-slide-3.jpg');">
@@ -168,10 +168,11 @@
             <h1 class="hero-slider__title">Пусть остальные <br> позеленеют от зависти
               <span class="hero-slider__subtitle">Распродажа зелени </span>
             </h1>
-            <a class="hero-slider__btn" href="#">Купить сейчас</a>
+            <a class="hero-slider__btn animation-btn--green" href="#">Купить сейчас</a>
           </div>
         </div>
       </div>
+
       <ul class="info">
         <li class="info__item">
           <svg class="info__icon">
@@ -201,34 +202,35 @@
           </div>
         </li>
       </ul>
+
     </section>
     <section class="product">
       <div class="container">
         <h2 class="product__title title">Топовые товары</h2>
-
+        <!-- Не заработал микситап, не получилось активное состояние элемента -->
         <ul class="filter">
-          <li class="filter__item">
-            <button class="filter__btn" type="button" data-filter="all">
+          <li class="filter__item ">
+            <button class="filter__btn animation-filter" type="button" data-filter="all">
               Все товары
             </button>
           </li>
           <li class="filter__item">
-            <button class="filter__btn" type="button" data-filter=".category-fructs">
+            <button class="filter__btn animation-filter" type="button" data-filter=".category-fructs">
               Фрукты
             </button>
           </li>
           <li class="filter__item">
-            <button class="filter__btn" type="button" data-filter=".category-vegetables">
+            <button class="filter__btn animation-filter" type="button" data-filter=".category-vegetables">
               Овощи
             </button>
           </li>
           <li class="filter__item">
-            <button class="filter__btn" type="button" data-filter=".category-beverages">
+            <button class="filter__btn animation-filter" type="button" data-filter=".category-beverages">
               Напитки
             </button>
           </li>
           <li class="filter__item">
-            <button class="filter__btn" type="button" data-filter=".category-grocery">
+            <button class="filter__btn animation-filter" type="button" data-filter=".category-grocery">
               Бакалея
             </button>
           </li>
@@ -242,7 +244,7 @@
                 <span class="badge-discount">-50%</span>
               </div>
               <button class="like">
-                <svg class="product-heart">
+                <svg class="product-heart animation-heart">
                   <use xlink:href="images/sprite.svg#icon-heart"></use>
                   <span class="sr-only">Добавить в избранное</span>
                 </svg>
@@ -265,8 +267,8 @@
                 <span class="price-old">1999 &#8381</span>
                 <span class="price-new">999 &#8381</span>
               </div>
-              <button class="product__basket">
-                <svg class="product-basket">
+              <button class="product__basket animation-btn--green">
+                <svg class="product-basket ">
                   <use xlink:href="images/sprite.svg#icon-basket"></use>
                   <span class="sr-only">Добавить в корзину</span>
                 </svg>
@@ -277,7 +279,7 @@
             <div class="product__like-inner">
               <div class="badge-wrapper"></div>
               <button class="like">
-                <svg class="product-heart">
+                <svg class="product-heart animation-heart">
                   <use xlink:href="images/sprite.svg#icon-heart"></use>
                   <span class="sr-only">Добавить в избранное</span>
                 </svg>
@@ -299,7 +301,7 @@
               <div class="product__price-wrapper">
                 <span class="price-new">199 &#8381</span>
               </div>
-              <button class="product__basket">
+              <button class="product__basket animation-btn--green">
                 <svg class="product-basket">
                   <use xlink:href="images/sprite.svg#icon-basket"></use>
                   <span class="sr-only">Добавить в корзину</span>
@@ -313,7 +315,7 @@
                 <span class="badge-hit">Хит</span>
               </div>
               <button class="like">
-                <svg class="product-heart">
+                <svg class="product-heart animation-heart">
                   <use xlink:href="images/sprite.svg#icon-heart"></use>
                   <span class="sr-only">Добавить в избранное</span>
                 </svg>
@@ -335,8 +337,8 @@
               <div class="product__price-wrapper">
                 <span class="price-new">1019 &#8381</span>
               </div>
-              <button class="product__basket">
-                <svg class="product-basket">
+              <button class="product__basket animation-btn--green">
+                <svg class="product-basket animation-heart">
                   <use xlink:href="images/sprite.svg#icon-basket"></use>
                   <span class="sr-only">Добавить в корзину</span>
                 </svg>
@@ -347,7 +349,7 @@
             <div class="product__like-inner">
               <div class="badge-wrapper"></div>
               <button class="like">
-                <svg class="product-heart">
+                <svg class="product-heart animation-heart">
                   <use xlink:href="images/sprite.svg#icon-heart"></use>
                   <span class="sr-only">Добавить в избранное</span>
                 </svg>
@@ -369,7 +371,7 @@
               <div class="product__price-wrapper">
                 <span class="price-new">600 &#8381</span>
               </div>
-              <button class="product__basket">
+              <button class="product__basket animation-btn--green">
                 <svg class="product-basket">
                   <use xlink:href="images/sprite.svg#icon-basket"></use>
                   <span class="sr-only">Добавить в корзину</span>
@@ -383,7 +385,7 @@
                 <span class="badge-hit">Хит</span>
               </div>
               <button class="like">
-                <svg class="product-heart">
+                <svg class="product-heart animation-heart">
                   <use xlink:href="images/sprite.svg#icon-heart"></use>
                   <span class="sr-only">Добавить в Ищбранное</span>
                 </svg>
@@ -405,7 +407,7 @@
               <div class="product__price-wrapper">
                 <span class="price-new">49 &#8381</span>
               </div>
-              <button class="product__basket">
+              <button class="product__basket animation-btn--green">
                 <svg class="product-basket">
                   <use xlink:href="images/sprite.svg#icon-basket"></use>
                   <span class="sr-only">Добавить в корзину</span>
@@ -419,7 +421,7 @@
                 <span class="badge-discount">-30%</span>
               </div>
               <button class="like">
-                <svg class="product-heart">
+                <svg class="product-heart animation-heart">
                   <use xlink:href="images/sprite.svg#icon-heart"></use>
                   <span class="sr-only">Добавить в избранное</span>
                 </svg>
@@ -443,7 +445,7 @@
                 <span class="price-old">299 &#8381</span>
                 <span class="price-new">199 &#8381</span>
               </div>
-              <button class="product__basket">
+              <button class="product__basket animation-btn--green">
                 <svg class="product-basket">
                   <use xlink:href="images/sprite.svg#icon-basket"></use>
                   <span class="sr-only">Добавить в корзину</span>
@@ -457,7 +459,7 @@
                 <span class="badge-new">Новинка</span>
               </div>
               <button class="like">
-                <svg class="product-heart">
+                <svg class="product-heart animation-heart">
                   <use xlink:href="images/sprite.svg#icon-heart"></use>
                   <span class="sr-only">Добавить в избранное</span>
                 </svg>
@@ -479,7 +481,7 @@
               <div class="product__price-wrapper">
                 <span class="price-new">877 &#8381</span>
               </div>
-              <button class="product__basket">
+              <button class="product__basket animation-btn--green">
                 <svg class="product-basket">
                   <use xlink:href="images/sprite.svg#icon-basket"></use>
                   <span class="sr-only">Добавить в корзину</span>
@@ -493,7 +495,7 @@
                 <span class="badge-new">Новинка</span>
               </div>
               <button class="like">
-                <svg class="product-heart">
+                <svg class="product-heart animation-heart">
                   <use xlink:href="images/sprite.svg#icon-heart"></use>
                   <span class="sr-only">Добавить в избранное</span>
                 </svg>
@@ -515,7 +517,7 @@
               <div class="product__price-wrapper">
                 <span class="price-new">349 &#8381</span>
               </div>
-              <button class="product__basket">
+              <button class="product__basket animation-btn--green">
                 <svg class="product-basket">
                   <use xlink:href="images/sprite.svg#icon-basket"></use>
                   <span class="sr-only">Добавить в корзину</span>
@@ -524,7 +526,7 @@
             </div>
           </li>
         </ul>
-        <button class="view-btn" href="#">Показать еще</button>
+        <button class="view-btn animation-btn--transp" href="#">Показать еще</button>
       </div>
     </section>
   </main>
@@ -539,43 +541,67 @@
           <form class="footer-top__form" action="form" method="GET" enctype="multipart/form-data">
             <p class="footer-top__title">Следите за нашими акциями</p>
             <input class="footer-top__input" type="email" placeholder="email@email.com">
-            <button class="footer-top__btn">Подписаться</button>
+            <button class="footer-top__btn animation-btn">Подписаться</button>
           </form>
-          <ul class="footer-top__item">
-            <li class="footer-top__link">О нас</li>
-            <li class="footer-top__link">Контакты</li>
-            <li class="footer-top__link">Публичная оферта</li>
-            <li class="footer-top__link">Оплата и доставка</li>
-            <li class="footer-top__link">Вакансии</li>
-            <li class="footer-top__link">Акции</li>
-            <li class="footer-top__link">Отзывы</li>
-            <li class="footer-top__link">Новости</li>
+          <ul class="footer-top__list">
+            <li class="footer-top__item">
+              <a class="footer-top__link" href="#">О нас</a>
+            </li>
+            <li class="footer-top__item">
+              <a class="footer-top__link" href="#">Контакты</a>
+            </li>
+            <li class="footer-top__item">
+              <a class="footer-top__link" href="#">Публичная оферта</a>
+            </li>
+            <li class="footer-top__item">
+              <a class="footer-top__link" href="#">Оплата и доставка</a>
+            </li>
+            <li class="footer-top__item">
+              <a class="footer-top__link" href="#">Вакансии</a>
+            </li>
+            <li class="footer-top__item">
+              <a class="footer-top__link" href="#">Акции</a>
+            </li>
+            <li class="footer-top__item">
+              <a class="footer-top__link" href="#">Отзывы</a>
+            </li>
+            <li class="footer-top__item">
+              <a class="footer-top__link" href="#">Новости</a>
+            </li>
           </ul>
           <address class="footer-top__box">
             <a class="footer-top__tel" href="tel:7907288365">Горячая линия +7 907 288 365</a>
             <p class="footer-top__adress">Санкт-Петербург, ул. Ленина, 1</p>
             <ul class="social">
               <li class="social__item">
-                <a class="social__link" href="#" style="background-image: url('images/social/facebook.svg');"
-                  target="_blank">
+                <a class="social__link" href="#" target="_blank">
+                  <svg class="icon-facebook animation-social">
+                    <use xlink:href="images/sprite.svg#icon-facebook"></use>
+                  </svg>
                   <span class="sr-only">Перейти в Фейсбук</span>
                 </a>
               </li>
               <li class="social__item">
-                <a class="social__link" href="#" style="background-image: url('images/social/youtube.svg');"
-                  target="_blank">
+                <a class="social__link" href="#" target="_blank">
+                  <svg class="icon-youtube animation-social">
+                    <use xlink:href="images/sprite.svg#icon-youtube"></use>
+                  </svg>
                   <span class="sr-only">Перейти в Ютуб</span>
                 </a>
               </li>
               <li class="social__item">
-                <a class="social__link" href="#" style="background-image: url('images/social/telegram.svg');"
-                  target="_blank">
+                <a class="social__link" href="#" target="_blank">
+                  <svg class="icon-telegram animation-social">
+                    <use xlink:href="images/sprite.svg#icon-telegram"></use>
+                  </svg>
                   <span class="sr-only">Перейти в Телеграм</span>
                 </a>
               </li>
               <li class="social__item">
-                <a class="social__link" href="#" style="background-image: url('images/social/instagram.svg');"
-                  target="_blank">
+                <a class="social__link" href="#" target="_blank">
+                  <svg class="icon-instagram animation-social">
+                    <use xlink:href="images/sprite.svg#icon-instagram"></use>
+                  </svg>
                   <span class="sr-only">Перейти в Инстаграм</span>
                 </a>
               </li>
@@ -583,12 +609,17 @@
           </address>
         </div>
       </div>
-      <div class="footer-bottom">
-        <p class="footer-bottom__year">© 2021 ФРЕШОК</p>
-        <ul class="pay">
-          <li class="pay__visa" style="background-image: url('images/elements/visa.svg');"></li>
-          <li class="pay__mcard" style="background-image: url('images/elements/mastercard.svg');"></li>
-        </ul>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="footer-bottom__inner">
+          <p class="footer-bottom__year">© 2021 ФРЕШОК</p>
+          <ul class="pay">
+            <li class="pay__visa" style="background-image: url('images/elements/visa.svg');"></li>
+            <li class="pay__mcard" style="background-image: url('images/elements/mastercard.svg');"></li>
+          </ul>
+        </div>
       </div>
     </div>
   </footer>
