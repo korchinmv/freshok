@@ -385,12 +385,6 @@
     padding: 14px;
     display: inherit;
   }
-  &__name {
-    @extend %opensans-600;
-    color: $dark-900;
-    text-align: left;
-    padding: 0 18px;
-  }
   &__basket-inner {
     display: flex;
     justify-content: space-between;
@@ -473,6 +467,7 @@
 
 .price-new {
   color: $dark-500;
+  margin-right: 12px;
 }
 
 .filter {
@@ -489,6 +484,106 @@
     line-height: 1.4;
     text-transform: uppercase;
   }
+}
+
+.products-category {
+  padding-bottom: 72px;
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__item {
+    max-height: 300px;
+    max-width: 300px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    object-fit: contain;
+    color: $dark-500;
+    text-transform: uppercase;
+    border-radius: 4px;
+    padding: 76px 32px;
+  }
+  &__item:not(:last-child) {
+    margin-right: 10px;
+  }
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 380px;
+  }
+  &__item--long {
+    max-width: 630px;
+  }
+  &__subtitle {
+    font-size: 12px;
+    line-height: 1;
+    @extend %opensans-700;
+    margin-bottom: 18px;
+  }
+  &__title {
+    @extend %ruda-700;
+    font-size: 30px;
+    line-height: 1.4;
+    margin-bottom: 12px;
+  }
+  &__link {
+    display: inline;
+    @extend %opensans-700;
+    line-height: 1;
+    padding-bottom: 6px;
+    border-bottom: 2px solid $dark-500;
+    width: fit-content;
+  }
+}
+
+.link-white {
+  border-bottom: 2px solid $white;
+}
+
+.stocks {
+  padding: 72px 0;
+  background-color: $bg-color;
+  &__title {
+    margin-bottom: 32px;
+    text-align: center;
+  }
+  &__item {
+    max-width: 300px;
+    min-height: 124px;
+    padding: 12px;
+    border: 1px solid $silver-600;
+    border-radius: 6px;
+    background-color: $white;
+  }
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__info-bottom {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.stocks__info-name {
+  @extend %product-name;
+  margin-bottom: auto;
+}
+
+.stocks__info-status {
+  @extend %product-status;
+}
+
+.price-wrapper {
+  display: flex;
 }
 
 //FOOTER//

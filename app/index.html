@@ -261,7 +261,7 @@
                 </a>
               </div>
             </div>
-            <p class="product__name">Ананас, 1кг</p>
+            <p class="product-name">Ананас, 1кг</p>
             <div class="product__basket-inner">
               <div class="product__price-wrapper">
                 <span class="price-old">1999 &#8381</span>
@@ -296,7 +296,7 @@
                 </a>
               </div>
             </div>
-            <p class="product__name">Лимон, 1кг</p>
+            <p class="product-name">Лимон, 1кг</p>
             <div class="product__basket-inner">
               <div class="product__price-wrapper">
                 <span class="price-new">199 &#8381</span>
@@ -332,7 +332,7 @@
                 </a>
               </div>
             </div>
-            <p class="product__name">Питахайя красная с белой мякотью, 1шт</p>
+            <p class="product-name">Питахайя красная с белой мякотью, 1шт</p>
             <div class="product__basket-inner">
               <div class="product__price-wrapper">
                 <span class="price-new">1019 &#8381</span>
@@ -366,7 +366,7 @@
                 </a>
               </div>
             </div>
-            <p class="product__name">Кетчуп томатный детский органический Bio-Zentrale 500мл, 1 шт</p>
+            <p class="product-name">Кетчуп томатный детский органический Bio-Zentrale 500мл, 1 шт</p>
             <div class="product__basket-inner">
               <div class="product__price-wrapper">
                 <span class="price-new">600 &#8381</span>
@@ -402,7 +402,7 @@
                 </a>
               </div>
             </div>
-            <p class="product__name">Морковь молодая с бабушкиной грядки, 1кг</p>
+            <p class="product-name">Морковь молодая с бабушкиной грядки, 1кг</p>
             <div class="product__basket-inner">
               <div class="product__price-wrapper">
                 <span class="price-new">49 &#8381</span>
@@ -438,7 +438,7 @@
                 </a>
               </div>
             </div>
-            <p class="product__name">Напиток сокосодержащий Sanpellegrino Aranciata Orange Красный апельсин
+            <p class="product-name">Напиток сокосодержащий Sanpellegrino Aranciata Orange Красный апельсин
               безалкогольн...</p>
             <div class="product__basket-inner">
               <div class="product__price-wrapper">
@@ -476,7 +476,7 @@
                 </a>
               </div>
             </div>
-            <p class="product__name">Кофе с коноплей органический Caffé Salomoni 250г</p>
+            <p class="product-name">Кофе с коноплей органический Caffé Salomoni 250г</p>
             <div class="product__basket-inner">
               <div class="product__price-wrapper">
                 <span class="price-new">877 &#8381</span>
@@ -512,7 +512,7 @@
                 </a>
               </div>
             </div>
-            <p class="product__name">Перец оранжевый, 1кг</p>
+            <p class="product-name">Перец оранжевый, 1кг</p>
             <div class="product__basket-inner">
               <div class="product__price-wrapper">
                 <span class="price-new">349 &#8381</span>
@@ -529,6 +529,91 @@
         <button class="view-btn animation-btn--transp" href="#">Показать еще</button>
       </div>
     </section>
+
+    <div class="products-category">
+      <div class="container">
+        <div class="products-category__wrapper">
+          <div class="products-category__item products-category__item--long"
+            style="background-image: url('images/products-category/fructs-bg.jpg');">
+            <div class="products-category__inner">
+              <div class="products-category__subtitle mod-white">
+                <p>Свежайшие фрукты</p>
+              </div>
+              <h3 class="products-category__title title-white">Начни фруктовое лето всего от 99 ₽</h3>
+              <a class="products-category__link link-white" href="#">Перейти к покупкам</a>
+            </div>
+          </div>
+          <div class="products-category__item"
+            style="background-image: url('images/products-category/vegetables-bg.jpg');">
+            <div class="products-category__inner">
+              <div class="products-category__subtitle">
+                <p>Сезонная распродажа</p>
+              </div>
+              <h3 class="products-category__title">Овощепад до -50% </h3>
+              <a class="products-category__link" href="#">Перейти к покупкам</a>
+            </div>
+          </div>
+          <div class="products-category__item" style="background-image: url('images/products-category/bread-bg.jpg');">
+            <div class="products-category__inner">
+              <div class="products-category__subtitle">
+                <p>Ням-ням</p>
+              </div>
+              <h3 class="products-category__title">Свежий хлебчик</h3>
+              <a class="products-category__link" href="#">Перейти к покупкам</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="stocks">
+      <div class="container">
+        <h2 class="stocks__title title">Акции</h2>
+
+        <ul class="filter">
+          <li class="filter__item ">
+            <button class="filter__btn animation-filter" type="button" data-filter="all">
+              Все товары
+            </button>
+          </li>
+          <li class="filter__item">
+            <button class="filter__btn animation-filter" type="button" data-filter=".category-new">
+              Новинки
+            </button>
+          </li>
+          <li class="filter__item">
+            <button class="filter__btn animation-filter" type="button" data-filter=".category-hit">
+              Хиты
+            </button>
+          </li>
+        </ul>
+
+        <ul class="stocks__wrapper">
+          <a class="stocks__item-link" href="#">
+            <li class="stocks__item">
+              <span class="badge-new">Новинка</span>
+              <div class="stocks__inner">
+                <img class="stocks__img" src="images/product-stocks/pineapple.jpg" alt="Ананас">
+                <div class="stocks__info">
+                  <div class="stocks__info-name">Ананас, 1 кг</div>
+                  <div class="stocks__info-status">В наличии</div>
+                  <div class="stocks__info-bottom">
+                    <div class="price-wrapper">
+                      <span class="price-new">999 &#8381</span>
+                      <span class="price-old">1999 &#8381</span>
+                    </div>
+                    <span class="rating-num">4.5</span>
+                    <div class="star"></div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </a>
+        </ul>
+        <button class="view-btn animation-btn--transp" href="#">Показать еще</button>
+      </div>
+    </section>
+
   </main>
 
   <footer class="footer">

@@ -56,6 +56,13 @@ body {
   margin: 0 auto;
 }
 
+.product-name {
+  @extend %opensans-600;
+  color: $dark-900;
+  text-align: left;
+  padding: 0 18px;
+}
+
 .icon-user,
 .icon-heart,
 .icon-basket {
@@ -85,6 +92,25 @@ body {
 .like {
   width: 44px;
   height: 44px;
+}
+
+.title-white {
+  @extend %ruda-600;
+  color: $white;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.25);
+}
+
+.mod-white {
+  @extend %opensans-700;
+  color: $white;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.25);
+}
+
+.link-white {
+  @extend %opensans-700;
+  color: $white;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.25);
+  text-decoration: none;
 }
 
 .like:focus {
