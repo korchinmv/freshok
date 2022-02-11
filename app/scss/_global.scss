@@ -12,7 +12,8 @@ body {
   font-size: 14px;
   line-height: 1.4;
   letter-spacing: 0.03em;
-  @extend %opensans-400;
+  font-family: $opensans;
+  font-weight: 400;
   display: flex;
   flex-direction: column;
 }
@@ -39,19 +40,20 @@ body {
 .animation {
   outline: transparent;
   transition: box-shadow 0.2s, border-radius 0.2s, opacity 0.2s;
-}
 
-.animation:focus {
-  box-shadow: inset 0 0 0 3px $green-200;
-  border-radius: 3px;
-}
+  &:focus {
+    box-shadow: inset 0 0 0 3px $green-200;
+    border-radius: 3px;
+  }
 
-.animation:hover {
-  opacity: 0.7;
+  &:hover {
+    opacity: 0.7;
+  }
 }
 
 .title {
-  @extend %ruda-600;
+  font-family: $ruda;
+  font-weight: 600;
   font-size: 32px;
   line-height: 1.4;
   text-transform: uppercase;
@@ -60,172 +62,107 @@ body {
   margin-bottom: 30px;
 }
 
-.view-btn {
+//BUTTONS//
+
+.button {
   font-size: 18px;
   line-height: 1.3;
-  @extend %opensans-400;
-  color: $green-900;
   padding: 12px 24px;
-  border: 1px solid $green-900;
+}
+
+.button--green {
+  background-color: $green-900;
+  color: $white;
+  outline: transparent;
+  transition: background-color 0.2s, box-shadow 0.2s;
   border-radius: 6px;
+
+  &:focus {
+    box-shadow: 0 0 0 4px $green-200;
+  }
+
+  &:hover {
+    background-color: $green-1000;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.5);
+    box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.button--transp {
+  transition: background-color 0.2s, box-shadow 0.2s;
+  border: 1px solid $green-900;
+  color: $green-900;
   display: block;
   margin: 0 auto;
+  border-radius: 6px;
 }
 
-.icon-user,
-.icon-heart,
-.icon-basket {
-  fill: $white;
-  display: block;
-  margin: 0 auto;
-  width: 32px;
-  height: 30px;
+.button--transp:hover {
+  background-color: #eff6e7;
 }
 
-.icon-user {
-  width: 25px;
-  height: 32px;
+.button--transp:focus {
+  box-shadow: 0 0 0 4px $green;
+  border-radius: 6px;
+}
+.button--transp:active {
+  box-shadow: inset 0 10px 4px $card-bg;
+  border-radius: 6px;
 }
 
-.icon-facebook,
-.icon-youtube,
-.icon-telegram,
-.icon-instagram {
-  fill: $white;
-  display: block;
-  margin: 0 auto;
-  width: 32px;
-  height: 30px;
-}
+.button-form {
+  background-color: $green-900;
+  color: $white;
+  outline: transparent;
+  transition: background-color 0.2s, box-shadow 0.2s;
+  border-radius: 0 6px 6px 0;
+  padding: 12px 16px;
+  position: absolute;
+  text-transform: uppercase;
+  font-family: $opensans;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.3;
 
-.like {
-  width: 44px;
-  height: 44px;
+  &:focus {
+    box-shadow: 0 0 0 4px $green-200;
+  }
+
+  &:hover {
+    background-color: $green-1000;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.5);
+    box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.25);
+  }
 }
 
 .title-white {
-  @extend %ruda-600;
+  font-family: $ruda;
+  font-weight: 600;
   color: $white;
   text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.25);
 }
 
 .mod-white {
-  @extend %opensans-700;
+  font-family: $opensans;
+  font-weight: 700;
   color: $white;
   text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.25);
 }
 
 .link-white {
-  @extend %opensans-700;
+  font-family: $opensans;
+  font-weight: 700;
   color: $white;
   text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.25);
   text-decoration: none;
 }
 
-.like:focus {
-  box-shadow: 0 0 0 3px #e0edcf;
-  border-radius: 3px;
-}
-
 .animation-btn--green:active {
   box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.animation-link:active {
-  color: #e0edcf;
-}
-
-.menu__btn {
-  transition: box-shadow 0.2s;
-}
-
-.menu__btn:focus {
-  box-shadow: 0px 0px 0px 4px rgba(255, 255, 255, 0.5);
-}
-
-.search__field {
-  outline: transparent;
-  transition: box-shadow 0.2s;
-}
-
-.search__field:focus {
-  box-shadow: 0px 0px 0px 4px rgba(255, 255, 255, 0.5);
-}
-
-.animation-btn {
-  transition: background-color 0.2s, box-shadow 0.2s;
-}
-
-.search__btn:hover {
-  background-color: rgba(49, 53, 43, 0.85);
-}
-
-.animation-btn:focus {
-  box-shadow: 0px 0px 0px 4px rgba(255, 255, 255, 0.5);
-}
-
-.animation-btn:active {
-  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-  color: rgba(255, 255, 255, 0.5);
-}
-
-.animation-filter {
-  transition: color 0.2s, box-shadow 0.2s;
-}
-
-.animation-filter:hover {
-  color: $green-900;
-}
-
-.animation-filter:focus {
-  box-shadow: 0px 0px 0px 3px #e0edcf;
-  border-radius: 3px;
-}
-
-.animation-filter:active {
-  border-bottom: 3px solid #e0edcf;
-}
-
-.animation-heart {
-  transition: box-shadow 0.2s, fill 0.2s;
-}
-
-.animation-heart:hover {
-  fill: $orange-900;
-}
-
-.animation-heart:focus {
-  box-shadow: 0px 0px 0px 3px #e0edcf;
-  border-radius: 3px;
-}
-
-.animation-heart:active {
-  fill: rgba(255, 184, 0, 0.5);
-}
-
-.animation-btn--transp {
-  transition: background-color 0.2s, box-shadow 0.2s;
-}
-
-.animation-btn--transp:hover {
-  background-color: #eff6e7;
-}
-
-.animation-btn--transp:focus {
-  box-shadow: 0px 0px 0px 4px rgba(99, 166, 14, 0.5);
-  border-radius: 6px;
-}
-.animation-btn--transp:active {
-  box-shadow: inset 0px 10px 4px rgba(0, 0, 0, 0.1);
-  border-radius: 6px;
-}
-
-.footer-top__input {
-  outline: transparent;
-  transition: box-shadow 0.2s;
-}
-
-.footer-top__input:focus {
-  box-shadow: 0px 0px 0px 4px rgba(255, 255, 255, 0.5);
-  border-radius: 6px 0 0 6px;
 }

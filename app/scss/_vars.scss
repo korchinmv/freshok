@@ -1,145 +1,30 @@
 //FONTS//
 
-%opensans-400 {
-  font-family: "OpenSans-Regular", sans-serif;
-  font-weight: 400;
-}
+$opensans: "OpenSans", sans-serif;
 
-%opensans-700 {
-  font-family: "OpenSans-Bold", sans-serif;
-  font-weight: 700;
-}
-
-%opensans-600 {
-  font-family: "OpenSans-SemiBold", sans-serif;
-  font-weight: 600;
-}
-
-%opensans-300 {
-  font-family: "OpenSans-Light", sans-serif;
-  font-weight: 300;
-}
-
-%ruda-400 {
-  font-family: "Ruda-Regular", sans-serif;
-  font-weight: 400;
-}
-
-%ruda-600 {
-  font-family: "Ruda-SemiBold", sans-serif;
-  font-weight: 600;
-}
-
-%ruda-700 {
-  font-family: "Ruda-Bold", sans-serif;
-  font-weight: 700;
-}
-
-%ruda-800 {
-  font-family: "Ruda-ExtraBold", sans-serif;
-  font-weight: 800;
-}
-
-%roboto-600 {
-  font-family: "Roboto-Medium", sans-serif;
-  font-weight: 600;
-}
-
-%roboto-400 {
-  font-family: "Roboto-Regular", sans-serif;
-  font-weight: 400;
-}
+$ruda: "Ruda", sans-serif;
 
 //COLORS//
 
 $green-100: #eff6e7;
-
 $green-200: #e0edcf;
-
+$green: rgba(99, 166, 14, 0.5);
 $green-900: #63a60f;
-
-$dark-green: #4d810c;
-
-$black: #000;
-
-$dark-500: #505050;
-
-$dark-800: #31352b;
-
-$dark-900: #121212;
-
-$bg-color: #f5f5f5;
-
+$green-1000: #4d810c;
 $placeholder-color: #4f4f4f;
-
+$dark-400: rgba(255, 255, 255, 0.5);
+$dark-500: #505050;
+$dark-600: rgba(49, 53, 43, 0.85);
+$dark-800: #31352b;
+$dark-900: #121212;
+$black: #000;
+$card-bg: rgba(0, 0, 0, 0.1);
+$border: rgba(17, 17, 17, 0.2);
+$bg-color: #f5f5f5;
 $white: #fff;
-
 $silver-100: #f6f6f6;
-
 $silver-600: #c1c1c1;
-
 $box-shadow: #eff6e7;
-
-$red-900: #cf3e3b;
-
 $hero-block: rgba(255, 255, 255, 0.8);
-
+$red-900: #cf3e3b;
 $orange-900: #ff7a00;
-
-//ELEMENTS//
-
-%badge-new {
-  @extend %opensans-700;
-  font-size: 10px;
-  line-height: 1;
-  color: $white;
-  padding: 3px 6px;
-  background-color: $green-900;
-  border-radius: 6px;
-  text-transform: uppercase;
-  display: inline-block;
-  max-width: 66px;
-  width: 100%;
-}
-
-%badge-discount {
-  @extend %opensans-700;
-  font-size: 10px;
-  line-height: 1;
-  color: $white;
-  padding: 3px 6px;
-  background-color: $red-900;
-  border-radius: 6px;
-  text-transform: uppercase;
-  display: inline-block;
-  max-width: 37px;
-  width: 100%;
-}
-
-%badge-hit {
-  @extend %opensans-700;
-  font-size: 10px;
-  line-height: 1;
-  color: $white;
-  padding: 3px 6px;
-  background-color: $orange-900;
-  border-radius: 6px;
-  text-transform: uppercase;
-  display: inline-block;
-  max-width: 34px;
-  width: 100%;
-}
-
-%product-name {
-  @extend %opensans-600;
-  color: $dark-900;
-  font-size: 14px;
-  line-height: 1.4;
-}
-
-%product-status {
-  @extend %opensans-600;
-  text-transform: uppercase;
-  font-size: 10px;
-  line-height: 1;
-}
