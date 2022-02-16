@@ -13,7 +13,6 @@ body {
   line-height: 1.4;
   font-family: $opensans;
   font-weight: 400;
-  letter-spacing: 0.03em;
   display: flex;
   flex-direction: column;
 }
@@ -59,6 +58,11 @@ body {
   text-transform: uppercase;
   color: $dark-900;
   text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.no-scroll {
+  overflow-y: hidden; //Скрываем все, что по высоте не влазит в экран при нажатии на корзину
 }
 
 //CARD ELEMENTS//
@@ -75,42 +79,25 @@ body {
   display: inline-block;
   max-width: 66px;
   width: fit-content;
-}
-
-.badge--green {
-  background-color: $green-900;
   margin-bottom: 6px;
-}
 
-.badge--red {
-  background-color: $red-900;
-  margin-bottom: 6px;
-}
+  &--green {
+    background-color: $green-900;
+  }
 
-.badge--orange {
-  background-color: $orange-900;
-  margin-bottom: 6px;
-}
+  &--red {
+    background-color: $red-900;
+  }
 
-.badge--green-small {
-  background-color: $green-900;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
+  &--orange {
+    background-color: $orange-900;
+  }
 
-.badge--red-small {
-  background-color: $red-900;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.badge--orange-small {
-  background-color: $orange-900;
-  position: absolute;
-  top: 0;
-  left: 0;
+  &--absolute {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 }
 
 .product-status {
@@ -118,30 +105,30 @@ body {
   font-size: 10px;
   font-weight: 600;
   line-height: 1;
-}
 
-.product-status--green {
-  color: $green-900;
-}
-.product-status--red {
-  color: $red-900;
-}
-.product-status--grey {
-  color: $silver-600;
+  &--green {
+    color: $green-900;
+  }
+
+  &--red {
+    color: $red-900;
+  }
+
+  &--grey {
+    color: $silver-600;
+  }
 }
 
 .stepper {
   display: flex;
   align-items: center;
-  width: 74px;
   user-select: none;
 
-  &__field {
-    display: inline-flex;
+  &--indent {
+    margin-right: 12px;
   }
 
   &__input {
-    height: 24px;
     width: 36px;
     font-size: 16px;
     line-height: 1;
@@ -155,23 +142,27 @@ body {
   &__btn {
     background-color: $green-900;
     width: 24px;
-    height: 24px;
-  }
+    transition: opacity 0.2s;
 
-  &__btn--minus {
-    background-image: url(../images/elements/minus.svg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    border-radius: 3px 0 0 3px;
-  }
+    &--minus {
+      background-image: url(../images/elements/minus.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: inherit;
+      border-radius: 3px 0 0 3px;
+    }
 
-  &__btn--plus {
-    background-image: url(../images/elements/plus.svg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    border-radius: 0 3px 3px 0;
+    &--plus {
+      background-image: url(../images/elements/plus.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: inherit;
+      border-radius: 0 3px 3px 0;
+    }
+
+    &:hover {
+      opacity: 0.9;
+    }
   }
 }
 
@@ -181,9 +172,37 @@ body {
   font-size: 18px;
   line-height: 1.3;
   padding: 12px 24px;
+  letter-spacing: 0.03em;
+
+  &--transp {
+    transition: background-color 0.2s, box-shadow 0.2s;
+    border: 1px solid $green-900;
+    color: $green-900;
+    display: block;
+    margin: 0 auto;
+    border-radius: 6px;
+
+    &:hover {
+      background-color: #eff6e7;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 4px $green;
+      border-radius: 6px;
+    }
+
+    &:active {
+      box-shadow: inset 0 10px 4px $card-bg;
+      border-radius: 6px;
+    }
+  }
 }
 
-.button--green {
+.button-green {
+  font-size: 18px;
+  line-height: 1.3;
+  padding: 12px 24px;
+  letter-spacing: 0.03em;
   background-color: $green-900;
   color: $white;
   outline: transparent;
@@ -199,31 +218,14 @@ body {
   }
 
   &:active {
-    color: rgba(255, 255, 255, 0.5);
-    box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.25);
+    color: $dark-400;
+    box-shadow: inset 0 4px 4px $dark-950;
   }
-}
 
-.button--transp {
-  transition: background-color 0.2s, box-shadow 0.2s;
-  border: 1px solid $green-900;
-  color: $green-900;
-  display: block;
-  margin: 0 auto;
-  border-radius: 6px;
-}
-
-.button--transp:hover {
-  background-color: #eff6e7;
-}
-
-.button--transp:focus {
-  box-shadow: 0 0 0 4px $green;
-  border-radius: 6px;
-}
-.button--transp:active {
-  box-shadow: inset 0 10px 4px $card-bg;
-  border-radius: 6px;
+  &--center {
+    display: block;
+    margin: 0 auto;
+  }
 }
 
 .button-form {
@@ -249,8 +251,8 @@ body {
   }
 
   &:active {
-    color: rgba(255, 255, 255, 0.5);
-    box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.25);
+    color: $dark-400;
+    box-shadow: inset 0 4px 4px $dark-950;
   }
 }
 
@@ -258,24 +260,24 @@ body {
   font-family: $ruda;
   font-weight: 600;
   color: $white;
-  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.25);
+  text-shadow: 2px 2px 0 $dark-950;
 }
 
 .mod-white {
   font-family: $opensans;
   font-weight: 700;
   color: $white;
-  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.25);
+  text-shadow: 1px 1px 0 $dark-950;
 }
 
 .link-white {
   font-family: $opensans;
   font-weight: 700;
   color: $white;
-  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.25);
+  text-shadow: 1px 1px 0 $dark-950;
   text-decoration: none;
 }
 
 .animation-btn--green:active {
-  box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: inset 0 4px 4px $dark-950;
 }
