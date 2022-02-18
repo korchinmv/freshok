@@ -8,25 +8,29 @@ $ruda: "Ruda", sans-serif;
 
 $green-100: #eff6e7;
 $green-200: #e0edcf;
-$green: rgba(99, 166, 14, 0.5);
 $green-900: #63a60f;
 $green-1000: #4d810c;
-$placeholder-color: #4f4f4f;
-$dark-400: rgba(255, 255, 255, 0.5);
+$green: rgba($green-1000, 0.5);
+
+$dark-400: rgba($white, 0.5);
+$dark-450: #4f4f4f;
 $dark-500: #505050;
-$dark-550: rgba(193, 193, 193, 0.3);
-$dark-600: rgba(49, 53, 43, 0.85);
+$dark-550: rgba($silver-600, 0.3);
+$dark-600: rgba($dark-800, 0.85);
 $dark-800: #31352b;
 $dark-900: #121212;
-$dark-950: rgba(0, 0, 0, 0.25);
+$dark-950: rgba($black, 0.25);
+
+$black-1000: rgba($black, 0.1);
+$black-900: rgba($black, 0.2);
 $black: #000;
-$card-bg: rgba(0, 0, 0, 0.1);
-$border: rgba(17, 17, 17, 0.2);
-$bg-color: #f5f5f5;
+
 $white: #fff;
+
+$silver-50: #f5f5f5;
 $silver-100: #f6f6f6;
+$silver-200: rgba($white, 0.8);
 $silver-600: #c1c1c1;
-$box-shadow: #eff6e7;
-$hero-block: rgba(255, 255, 255, 0.8);
+
 $red-900: #cf3e3b;
 $orange-900: #ff7a00;
