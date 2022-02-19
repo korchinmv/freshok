@@ -273,19 +273,19 @@
   }
 
   &__link--user-icon::before {
-    background-image: url(/images/icons/icon-user.svg);
+    background-image: url(../images/icons/icon-user.svg);
     width: 25px;
     height: 32px;
   }
 
   &__link--heart-icon::before {
-    background-image: url(/images/icons/icon-heart.svg);
+    background-image: url(../images/icons/icon-heart.svg);
     width: 32px;
     height: 28px;
   }
 
   &__link--basket-icon::before {
-    background-image: url(/images/icons/icon-basket.svg);
+    background-image: url(../images/icons/icon-basket.svg);
     width: 32px;
     height: 30px;
   }
@@ -629,15 +629,15 @@
     letter-spacing: 0;
 
     &--scooter-icon::before {
-      background-image: url(/images/icons/icon-scooter.svg);
+      background-image: url(../images/icons/icon-scooter.svg);
     }
 
     &--return-icon::before {
-      background-image: url(/images/icons/icon-return-box.svg);
+      background-image: url(../images/icons/icon-return-box.svg);
     }
 
     &--time-icon::before {
-      background-image: url(/images/icons/icon-time.svg);
+      background-image: url(../images/icons/icon-time.svg);
     }
 
     &:not(:last-child) {
