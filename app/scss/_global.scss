@@ -193,12 +193,12 @@ body {
     }
 
     &:focus {
-      box-shadow: 0 0 0 4px $green;
+      box-shadow: 0 0 0 4px rgba($green-1000, 0.5);
       border-radius: 6px;
     }
 
     &:active {
-      box-shadow: inset 0 10px 4px $black-1000;
+      box-shadow: inset 0 10px 4px rgba($black, 0.1);
       border-radius: 6px;
     }
   }
@@ -224,8 +224,8 @@ body {
   }
 
   &:active {
-    color: $dark-400;
-    box-shadow: inset 0 4px 4px $dark-950;
+    color: rgba($white, 0.5);
+    box-shadow: inset 0 4px 4px rgba($black, 0.25);
   }
 
   &--center {
@@ -257,8 +257,8 @@ body {
   }
 
   &:active {
-    color: $dark-400;
-    box-shadow: inset 0 4px 4px $dark-950;
+    color: rgba($white, 0.5);
+    box-shadow: inset 0 4px 4px rgba($black, 0.25);
   }
 }
 
@@ -378,24 +378,24 @@ body {
   font-family: $ruda;
   font-weight: 600;
   color: $white;
-  text-shadow: 2px 2px 0 $dark-950;
+  text-shadow: 2px 2px 0 rgba($black, 0.25);
 }
 
 .mod-white {
   font-family: $opensans;
   font-weight: 700;
   color: $white;
-  text-shadow: 1px 1px 0 $dark-950;
+  text-shadow: 1px 1px 0 rgba($black, 0.25);
 }
 
 .link-white {
   font-family: $opensans;
   font-weight: 700;
   color: $white;
-  text-shadow: 1px 1px 0 $dark-950;
+  text-shadow: 1px 1px 0 rgba($black, 0.25);
   text-decoration: none;
 }
 
 .animation-btn--green:active {
-  box-shadow: inset 0 4px 4px $dark-950;
+  box-shadow: inset 0 4px 4px rgba($black, 0.25);
 }
