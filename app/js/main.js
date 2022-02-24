@@ -27,7 +27,7 @@ $(function () {
     $('.overlay, .basket-popup').css('visibility', 'visible');
   });
 
-  $('.burger--active').click(function () {
+  $('.burger--close').click(function () {
     $('.overlay, .basket-popup').fadeOut(300);
   });
 

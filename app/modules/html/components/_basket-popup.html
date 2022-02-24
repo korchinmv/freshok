@@ -1,0 +1,85 @@
+<div class="overlay"></div>
+
+<div class="basket-popup">
+  <div class="basket-popup__head">
+
+    <div class="basket-popup__head-wrapper">
+      <span class="basket-popup__title-name">Корзина</span>
+      <button class="basket-popup__delete">Очистить корзину</button>
+    </div>
+
+    <button class="burger burger--active burger--close"></button>
+  </div>
+
+  <div class="basket-popup__content">
+
+    <ul class="basket-popup__list">
+
+      <li class="basket-popup__item">
+        <article class="card-basket">
+          <div class="card-basket__first-half">
+            <img class="card-basket__img" src="images/product-stocks/pineapple.jpg" alt="Ананас" width="60" height="60">
+            <div class="card-basket__text">
+              <h3 class="card-basket__name">Ананас, 1 кг</h3>
+              <span class="card-basket__price">999<span class="currency">₽</span></span>
+            </div>
+          </div>
+
+          <div class="card-basket__second-half">
+
+            <button class="burger burger--active burger--active-small burger--grey basket-popup__btn-close"></button>
+
+            <div class="stepper basket-popup__stepper">
+              <button class="stepper__btn stepper__btn--minus"></button>
+              <label class="stepper__field" for="">
+                <input class="stepper__input" type="text" value="1" maxlength="2" step="1" min="0" max="99">
+              </label>
+              <button class="stepper__btn stepper__btn--plus"></button>
+            </div>
+
+            <span class="card-basket__price">999<span class="currency">₽</span></span>
+
+          </div>
+        </article>
+      </li>
+
+      <li class="basket-popup__item">
+        <article class="card-basket">
+          <div class="card-basket__first-half">
+            <img class="card-basket__img" src="images/product/dragon-fruit.jpg" alt="Питахайя" width="60" height="60">
+            <div class="card-basket__text">
+              <h3 class="card-basket__name">Питахайя красная с белой мякотью, 1шт</h3>
+              <span class="card-basket__price">1019<span class="currency">₽</span></span>
+            </div>
+          </div>
+
+          <div class="card-basket__second-half">
+
+            <button class="burger burger--active burger--active-small burger--grey basket-popup__btn-close"></button>
+
+            <div class="stepper basket-popup__stepper">
+              <button class="stepper__btn stepper__btn--minus"></button>
+              <label class="stepper__field" for="">
+                <input class="stepper__input" type="text" value="1" maxlength="2" step="1" min="0" max="99">
+              </label>
+              <button class="stepper__btn stepper__btn--plus"></button>
+            </div>
+
+            <span class="card-basket__price">1019<span class="currency">₽</span></span>
+
+          </div>
+        </article>
+      </li>
+
+    </ul>
+  </div>
+
+  <div class="basket-popup__bottom">
+    <div class="basket-popup__fullprice">
+      <span class="basket-popup__result"> Товаров на сумму</span>
+      <span class="basket-popup__resultprice">2038<span class="currency">₽</span></span>
+    </div>
+    <button class="basket-popup__btn-buy">Оформить заказ</button>
+  </div>
+
+</div>

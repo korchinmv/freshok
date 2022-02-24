@@ -1,0 +1,116 @@
+.news {
+  padding: 22px 0 72px;
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  &__title {
+    text-align: left;
+    display: inline-block;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  &__link {
+    color: $green-900;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 1.3;
+    transition: opacity 0.2s;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      height: 2px;
+      width: 100%;
+      background-color: rgba($black, 0.2);
+      bottom: -2px;
+      left: 0;
+      transition: opacity 0.2s;
+    }
+
+    &:hover::after {
+      opacity: 0.8;
+    }
+  }
+}
+
+.card-news {
+  position: relative;
+  max-width: 410px;
+  min-height: 348px;
+  box-shadow: 0 3px 3px rgba($black, 0.25);
+  border-radius: 6px;
+
+  &__link {
+    display: block;
+    transition: color 0.2s;
+    color: $dark-900;
+    height: 100%;
+
+    &:hover {
+      color: $green-900;
+    }
+  }
+
+  &__img {
+    object-fit: cover;
+    border-radius: 6px 6px 0 0;
+  }
+
+  &__title {
+    padding: 18px;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 600;
+    @include line-clamp(6);
+  }
+}
+
+.news-badge {
+  position: absolute;
+  border-radius: 0 0 4px 4px;
+  background-color: $white;
+  width: 65px;
+  height: 76px;
+  left: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: $dark-900;
+  text-transform: uppercase;
+  padding-top: 18px;
+
+  &__mounth {
+    font-size: 10px;
+    line-height: 1.4;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+  }
+
+  &__number {
+    font-family: $ruda;
+    font-size: 30px;
+    font-weight: 600;
+  }
+}
+
+.link-white {
+  border-bottom: 2px solid $white;
+}

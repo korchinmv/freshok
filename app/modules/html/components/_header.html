@@ -1,1 +1,125 @@
-<header class="header"></header>
+<header class="header">
+  <nav class="header__nav">
+
+    <div class="header__top">
+      <div class="container">
+        <div class="header__wrapper">
+          <div class="header__item">
+            <div class="header__links">
+
+              <a class="support-link" href="#">
+                <svg>
+                  <use xlink:href="images/sprite.svg#icon-del-address"></use>
+                </svg>
+                Адрес и время доставки 321
+              </a>
+
+              <a class="support-link" href="#">
+                <svg>
+                  <use xlink:href="images/sprite.svg#icon-tel"></use>
+                </svg>
+                Горячая линия 24/7
+              </a>
+            </div>
+          </div>
+
+          <ul class="menu">
+            <li class="menu__item">
+              <a class="menu__link" href="#">Доставка</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">О нас</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Новости</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="header__bottom">
+      <div class="container">
+        <div class="header__wrapper">
+          <a class="logo" href="#">
+            <img class="logo__img" src="images/logo.svg" width="200" height="60" alt="Логотип интернет магазина ФрешОК">
+          </a>
+
+          <button class="catalog-btn" type="button">
+            Каталог продуктов
+          </button>
+
+          <ul class="dropdown">
+            <li class="dropdown__item">
+              <a class="dropdown__link" href="#">Овощи и фрукты</a>
+            </li>
+            <li class="dropdown__item">
+              <a class="dropdown__link" href="#">Бакалея</a>
+            </li>
+            <li class="dropdown__item">
+              <a class="dropdown__link" href="#">Молочные продукты</a>
+            </li>
+            <li class="dropdown__item">
+              <a class="dropdown__link" href="#">Хлеб</a>
+            </li>
+            <li class="dropdown__item">
+              <a class="dropdown__link" href="#">Мясо</a>
+            </li>
+            <li class="dropdown__item">
+              <a class="dropdown__link" href="#">Колбаса</a>
+            </li>
+            <li class="dropdown__item">
+              <a class="dropdown__link" href="#">Рыба</a>
+            </li>
+            <li class="dropdown__item">
+              <a class="dropdown__link" href="#">Алкоголь</a>
+            </li>
+            <li class="dropdown__item">
+              <a class="dropdown__link" href="#">Напитки</a>
+            </li>
+            <li class="dropdown__item">
+              <a class="dropdown__link" href="#">Торты</a>
+            </li>
+            <li class="dropdown__item">
+              <a class="dropdown__link" href="#">Мясо</a>
+            </li>
+            <li class="dropdown__item">
+              <a class="dropdown__link" href="#">Чай, кофе</a>
+            </li>
+          </ul>
+
+          <form class="form-search" action="form" method="GET" enctype="multipart/form-data">
+            <label class="sr-only" for="searh-field">Форма поиска на сайте</label>
+            <input class="search__field" type="search" name="searh-field" id="searh-field" required
+              placeholder="Найти в магазине ...">
+            <button class="search__btn" type="button">Поиск</button>
+          </form>
+
+          <ul class="user-nav">
+            <li class="user-nav__item">
+              <button class="user-nav__link user-nav__link--user-icon" type="button">
+                <span class="sr-only">Пользовательское меню</span>
+              </button>
+            </li>
+
+            <li class="user-nav__item">
+              <button class="user-nav__link user-nav__link--heart-icon" type="button">
+                <span class="sr-only">Избранные товары</span>
+                <span class="user-nav__num">4</span>
+              </button>
+            </li>
+
+            <li class="user-nav__item">
+              <button class="user-nav__link user-nav__link--basket-icon" type="button">
+                <span class="sr-only">Корзина товаров</span>
+                <span class="user-nav__num">5</span>
+              </button>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+  </nav>
+
+</header>

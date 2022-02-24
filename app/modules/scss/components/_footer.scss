@@ -1,0 +1,119 @@
+.footer {
+  background-color: $dark-500;
+  color: $white;
+
+  &__top {
+    padding: 30px 0;
+  }
+
+  &__logo {
+    display: inline-block;
+    margin-bottom: 30px;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__list {
+    column-count: 3;
+    column-gap: 60px;
+    margin: -15px 60px 0 0;
+  }
+
+  &__top-box {
+    margin-top: -15px;
+  }
+
+  &__link {
+    display: inline-block;
+    padding: 13px 5px;
+  }
+
+  &__bottom {
+    border-top: 2px solid rgb($dark-300, 0.3);
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 0;
+  }
+
+  &__copy {
+    text-transform: uppercase;
+  }
+}
+
+.link-support {
+  display: block;
+  padding: 13px 5px;
+}
+
+.form-email {
+  margin-right: 240px;
+
+  &__title {
+    line-height: 1;
+    margin-bottom: 18px;
+    min-width: 200px;
+  }
+
+  &__input {
+    padding: 10px;
+    border-radius: 6px 0 0 6px;
+
+    &::placeholder {
+      color: $dark-450;
+      line-height: 1;
+    }
+  }
+}
+
+.social {
+  display: flex;
+
+  &__link {
+    display: inline-block;
+    width: 44px;
+    height: 44px;
+    outline: transparent;
+    display: flex;
+
+    &:active {
+      fill: $green-200;
+    }
+
+    svg {
+      fill: $white;
+      margin: auto;
+      width: 32px;
+      height: 30px;
+
+      &:active {
+        fill: $green-200;
+      }
+    }
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 2px;
+  }
+}
+
+.pay {
+  display: flex;
+
+  &__visa {
+    width: 93px;
+    height: 29px;
+    margin-right: 24px;
+  }
+
+  &__mcard {
+    width: 49px;
+    height: 29px;
+  }
+}
