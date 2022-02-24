@@ -61,14 +61,9 @@ body {
   letter-spacing: 0.03em;
 }
 
-.no-scroll {
-  overflow-y: hidden; //Скрываем все, что по высоте не влазит в экран при нажатии на корзину
-}
-
 //CARD ELEMENTS//
 
 .badge {
-  font-family: $opensans;
   font-weight: 700;
   font-size: 10px;
   line-height: 1;
@@ -91,12 +86,6 @@ body {
 
   &--orange {
     background-color: $orange-900;
-  }
-
-  &--absolute {
-    position: absolute;
-    top: 0;
-    left: 0;
   }
 }
 
@@ -123,15 +112,6 @@ body {
   display: flex;
   align-items: center;
   user-select: none;
-
-  &--margin-r {
-    margin-right: 12px;
-  }
-
-  &--margin-l {
-    margin-left: 70px;
-    align-self: center;
-  }
 
   &__input {
     width: 36px;
@@ -174,37 +154,7 @@ body {
 
 //BUTTONS//
 
-.button {
-  font-size: 18px;
-  line-height: 1.3;
-  padding: 12px 24px;
-  letter-spacing: 0.03em;
-
-  &--transp {
-    transition: background-color 0.2s, box-shadow 0.2s;
-    border: 1px solid $green-900;
-    color: $green-900;
-    display: block;
-    margin: 0 auto;
-    border-radius: 6px;
-
-    &:hover {
-      background-color: #eff6e7;
-    }
-
-    &:focus {
-      box-shadow: 0 0 0 4px rgba($green-1000, 0.5);
-      border-radius: 6px;
-    }
-
-    &:active {
-      box-shadow: inset 0 10px 4px rgba($black, 0.1);
-      border-radius: 6px;
-    }
-  }
-}
-
-.button-green {
+.btn {
   font-size: 18px;
   line-height: 1.3;
   padding: 12px 24px;
@@ -214,6 +164,7 @@ body {
   outline: transparent;
   transition: background-color 0.2s, box-shadow 0.2s;
   border-radius: 6px;
+  border: 1px solid $green-900;
 
   &:focus {
     box-shadow: 0 0 0 4px $green-200;
@@ -232,6 +183,57 @@ body {
     display: block;
     margin: 0 auto;
   }
+
+  &--transp {
+    transition: background-color 0.2s, box-shadow 0.2s;
+    background-color: $white;
+    color: $green-900;
+    display: block;
+    margin: 0 auto;
+    border-radius: 6px;
+
+    &:hover {
+      background-color: #eff6e7;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 4px rgba($green-1000, 0.5);
+      border-radius: 6px;
+    }
+
+    &:active {
+      box-shadow: inset 0 10px 4px rgba($black, 0.1);
+      border-radius: 6px;
+      color: rgba($green-900, 0.5);
+    }
+  }
+
+  &--basket {
+    width: 32px;
+    height: 32px;
+    border-radius: 3px;
+    padding: 8px;
+    position: relative;
+
+    &::before {
+      content: "";
+      background-image: url(/images/icons/icon-basket.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      position: absolute;
+      height: 16px;
+      width: 15px;
+      top: 25%;
+      left: 50%;
+      transform: translate(-50%);
+      transition: opacity 0.2s;
+    }
+
+    &:hover::before {
+      opacity: 0.5;
+    }
+  }
 }
 
 .button-form {
@@ -243,7 +245,6 @@ body {
   padding: 12px 16px;
   position: absolute;
   text-transform: uppercase;
-  font-family: $opensans;
   font-weight: 700;
   font-size: 12px;
   line-height: 1.3;
@@ -262,32 +263,23 @@ body {
   }
 }
 
-.button-close {
+.burger {
   display: block;
   position: relative;
   width: 44px;
   height: 44px;
 
-  &::before,
-  &::after {
+  &__line,
+  &:before,
+  &:after {
     content: "";
-    position: absolute;
     background-color: $dark-800;
     position: absolute;
     width: 100%;
     height: 2px;
     width: 30px;
-    bottom: 21px;
-    left: 8px;
-    transition: background-color 0.2s;
-  }
-
-  &::before {
-    transform: rotate(45deg);
-  }
-
-  &:after {
-    transform: rotate(-45deg);
+    left: 7px;
+    transition: transform 0.4s, background-color 0.2s;
   }
 
   &:hover::before,
@@ -295,21 +287,42 @@ body {
     background-color: $green-900;
   }
 
-  &--small {
-    position: absolute;
-    top: 0;
-    right: 0;
+  &:before {
+    top: 12px;
+  }
 
+  &:after {
+    bottom: 10px;
+  }
+
+  &--active::before {
+    transform: rotate(45deg);
+    top: 21px;
+  }
+
+  &--active::after {
+    transform: rotate(-45deg);
+    bottom: 21px;
+  }
+
+  &--active.burger__line {
+    transform: scale(0);
+  }
+
+  &--grey {
+    &:before,
+    &:after {
+      background-color: $silver-600;
+    }
+  }
+
+  &--active-small {
     &::before,
     &::after {
       content: "";
       position: absolute;
-      background-color: $dark-800;
-      position: absolute;
-      width: 100%;
       height: 1px;
       width: 15px;
-      background-color: $silver-600;
       transition: background-color 0.2s;
     }
 
@@ -330,48 +343,6 @@ body {
   }
 }
 
-// .burger {
-//   display: block;
-//   position: relative;
-//   width: 44px;
-//   height: 44px;
-// }
-
-// .burger__line,
-// .burger:before,
-// .burger:after {
-//   content: "";
-//   background-color: $dark-800;
-//   position: absolute;
-//   width: 100%;
-//   height: 2px;
-//   width: 30px;
-//   left: 7px;
-//   transition: transform 0.4s;
-// }
-
-// .burger:before {
-//   top: 12px;
-// }
-
-// .burger:after {
-//   bottom: 10px;
-// }
-
-// .burger--active::before {
-//   transform: rotate(45deg);
-//   top: 21px;
-// }
-
-// .burger--active::after {
-//   transform: rotate(-45deg);
-//   bottom: 21px;
-// }
-
-// .burger--active .burger__line {
-//   transform: scale(0);
-// }
-
 //MODIFICATION
 
 .title-white {
@@ -382,20 +353,17 @@ body {
 }
 
 .mod-white {
-  font-family: $opensans;
-  font-weight: 700;
   color: $white;
   text-shadow: 1px 1px 0 rgba($black, 0.25);
 }
 
 .link-white {
-  font-family: $opensans;
   font-weight: 700;
   color: $white;
   text-shadow: 1px 1px 0 rgba($black, 0.25);
   text-decoration: none;
 }
 
-.animation-btn--green:active {
+.card-big__basket--animation:active {
   box-shadow: inset 0 4px 4px rgba($black, 0.25);
 }
