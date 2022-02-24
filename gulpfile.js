@@ -111,11 +111,11 @@ const htmlInclude = () => {
 }
 
 function watching() {
-  watch(['app/modules/scss/**/*.scss'], styles);
+  watch(['app/modules/scss/*.scss'], styles);
   watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
   watch(['app/**/*.html']).on('change', browserSync.reload);
   watch(['app/images/icons/*.svg'], svgSprites);
-  watch(['app/modules/html/*.html'], htmlInclude);
+  watch(['app/modules/html/**/*.html'], htmlInclude);
 }
 
 exports.styles = styles;
