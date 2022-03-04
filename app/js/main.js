@@ -16,14 +16,29 @@ $(function () {
     autoplaySpeed: 4500,
   });
 
-  $('.catalog-btn').on('click', function () {   //Добавление класса
-    $('.dropdown').toggleClass('dropdown--active');
-    $('.catalog-btn').toggleClass('catalog-btn--active');
+  $('.burger').on('click', function () {   //Добавление класса
+    $('.burger-menu').toggleClass('burger-menu--active');
+    $('.overlay').fadeIn(200);
+    $('.overlay').css('visibility', 'visible');
   })
+
+  $('.drop-menu').on('click', function () {   //Добавление класса
+    $('.drop-menu__dropdown').toggleClass('drop-menu__dropdown--active');
+    $('.drop-menu__btn').toggleClass('drop-menu__btn--active');
+  })
+
+  // $(document).mouseup(function (e) { // событие клика по веб-документу
+  //   var dropmenu = $('.drop-menu, .drop-menu__dropdown'); // тут указываем ID элемента
+
+  //   if (!dropmenu.is(e.target) // если клик был не по нашему блоку
+  //     && dropmenu.has(e.target).length === 0) { // и не по его дочерним элементам
+  //     dropdown.hide(); // скрываем его
+  //   }
+  // });
 
   $('.user-nav__link--basket-icon').click(function (e) {   //Появление попапа с исчезновением по нажатию кнопки 
     e.preventDefault();
-    $('.overlay, .basket-popup').fadeIn(300);
+    $('.overlay, .basket-popup').fadeIn(200);
     $('.overlay, .basket-popup').css('visibility', 'visible');
   });
 
@@ -34,6 +49,7 @@ $(function () {
   $(document).mouseup(function (e) { // событие клика по веб-документу
     var popup = $('.basket-popup'); // тут указываем ID элемента
     var overlay = $('.overlay');
+
     if (!popup.is(e.target) // если клик был не по нашему блоку
       && popup.has(e.target).length === 0) { // и не по его дочерним элементам
       popup.hide(); // скрываем его
@@ -48,6 +64,10 @@ $(function () {
     }
   });
 
+  $('.search-btn').on('click', function () {   //Добавление класса Мобильный поиск
+    $('.mobile-search').toggleClass('mobile-search--active');
+  })
+
   $('.star').rateYo({  //звездный рейтинг
     starWidth: "16px",
     ratedFill: "#FFB800",
@@ -60,16 +80,14 @@ $(function () {
     </svg>`,
   });
 
-  $(".stepper__btn--plus").click(function () {   //добавляет +1 товар при нажатии кнопки +
-    var $price = $(".stepper__input");
-    $price.val(parseInt($price.val()) + 1);
-    $price.change();
+  $('.stepper__btn--plus').click(function () {   //добавляет +1 товар при нажатии кнопки +
+    $('.stepper__input').val(parseInt($('.stepper__input').val()) + 1);
+    $('.stepper__input').change();
   });
 
-  $(".stepper__btn--minus").click(function () {  //убавляет -1 товар при нажатии кнопки -
-    var $price = $(".stepper__input");
-    $price.val(parseInt($price.val()) - 1);
-    $price.change();
+  $('.stepper__btn--minus').click(function () {  //убавляет -1 товар при нажатии кнопки -
+    $('.stepper__input').val(parseInt($('.stepper__input').val()) - 1);
+    $('.stepper__input').change();
   });
 
   var containerEl1 = document.querySelector('[data-ref="container-1"]');  //микситап на 2 контейнера на странице

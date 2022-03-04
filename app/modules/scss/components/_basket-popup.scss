@@ -7,7 +7,7 @@
   background-color: rgba($black, 0.25);
   visibility: hidden;
   transition: visibility 0.2s;
-  z-index: 1000;
+  z-index: 9;
 }
 
 .basket-popup {
@@ -21,7 +21,7 @@
   flex-direction: column;
   visibility: hidden;
   transition: visibility 0.2s;
-  z-index: 1001;
+  z-index: 10;
 
   &__head {
     display: flex;

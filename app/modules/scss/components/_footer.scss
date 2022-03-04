@@ -14,16 +14,45 @@
   &__wrapper {
     display: flex;
     justify-content: space-between;
+
+    @include mq("tablet-2", max) {
+      flex-direction: column;
+    }
   }
 
   &__list {
     column-count: 3;
     column-gap: 60px;
     margin: -15px 60px 0 0;
+
+    @include mq("desktop-2", max) {
+      column-gap: 50px;
+      margin-right: 10px;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    @include mq("tablet-2", max) {
+      column-count: 2;
+      padding: 24px 0;
+    }
+  }
+
+  // &__item {
+  //   column-width: 150px;
+  // }
+
+  &__link {
+    @include mq("tablet-2", max) {
+    }
   }
 
   &__top-box {
     margin-top: -15px;
+
+    @include mq("tablet-2", max) {
+      order: -1;
+    }
   }
 
   &__link {
@@ -50,10 +79,25 @@
 .link-support {
   display: block;
   padding: 13px 5px;
+
+  @include mq("tablet-2", max) {
+    margin: 0 auto;
+    max-width: 300px;
+    text-align: center;
+  }
 }
 
 .form-email {
-  margin-right: 240px;
+  margin-right: 150px;
+
+  @include mq("desktop", max) {
+    margin-right: 20px;
+  }
+
+  @include mq("tablet-2", max) {
+    order: 1;
+    margin: 0 auto;
+  }
 
   &__title {
     line-height: 1;
@@ -64,16 +108,33 @@
   &__input {
     padding: 10px;
     border-radius: 6px 0 0 6px;
+    outline: transparent;
+    transition: box-shadow 0.2s;
+
+    &:focus {
+      box-shadow: 0 0 0 4px $green-200;
+    }
 
     &::placeholder {
       color: $dark-450;
-      line-height: 1;
     }
+  }
+
+  &__btn {
+    margin-left: -4px;
   }
 }
 
 .social {
   display: flex;
+
+  @include mq("desktop", max) {
+    margin-left: -10px;
+  }
+
+  @include mq("tablet-2", max) {
+    justify-content: center;
+  }
 
   &__link {
     display: inline-block;
