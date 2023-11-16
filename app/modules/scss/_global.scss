@@ -1,369 +1,379 @@
 html,
 body {
-  height: 100%;
+	height: 100%;
 }
 
 main {
-  flex-grow: 1;
+	flex-grow: 1;
 }
 
 body {
-  background-color: $white;
-  font-size: 14px;
-  line-height: 1.4;
-  font-family: $opensans;
-  font-weight: 400;
-  display: flex;
-  flex-direction: column;
+	background-color: $white;
+	font-size: 14px;
+	line-height: 1.4;
+	font-family: $opensans;
+	font-weight: 400;
+	display: flex;
+	flex-direction: column;
 }
 
 .container {
-  max-width: 1320px;
-  margin: 0 auto;
-  padding: 0 15px;
+	max-width: 1320px;
+	margin: 0 auto;
+	padding: 0 15px;
 }
 
 .sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	white-space: nowrap;
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
 }
 
 .animation {
-  outline: transparent;
-  transition: box-shadow 0.2s, border-radius 0.2s, opacity 0.2s;
+	outline: transparent;
+	transition:
+		box-shadow 0.2s,
+		border-radius 0.2s,
+		opacity 0.2s;
 
-  &:focus {
-    box-shadow: inset 0 0 0 3px $green-200;
-    border-radius: 3px;
-  }
+	&:focus {
+		box-shadow: inset 0 0 0 3px $green-200;
+		border-radius: 3px;
+	}
 
-  &:hover {
-    opacity: 0.7;
-  }
+	&:hover {
+		opacity: 0.7;
+	}
 }
 
 .title {
-  font-family: $ruda;
-  font-weight: 600;
-  font-size: 32px;
-  line-height: 1.4;
-  text-transform: uppercase;
-  color: $dark-900;
-  text-align: center;
-  letter-spacing: 0.03em;
+	font-family: $ruda;
+	font-weight: 600;
+	font-size: 32px;
+	line-height: 1.4;
+	text-transform: uppercase;
+	color: $dark-900;
+	text-align: center;
+	letter-spacing: 0.03em;
 }
 
 //CARD ELEMENTS//
 
 .badge {
-  font-weight: 700;
-  font-size: 10px;
-  line-height: 1;
-  color: $white;
-  padding: 3px 6px;
-  border-radius: 6px;
-  text-transform: uppercase;
-  display: inline-block;
-  max-width: 66px;
-  width: fit-content;
-  margin-bottom: 6px;
+	font-weight: 700;
+	font-size: 10px;
+	line-height: 1;
+	color: $white;
+	padding: 3px 6px;
+	border-radius: 6px;
+	text-transform: uppercase;
+	display: inline-block;
+	max-width: 66px;
+	width: fit-content;
+	margin-bottom: 6px;
 
-  &--green {
-    background-color: $green-900;
-  }
+	&--green {
+		background-color: $green-900;
+	}
 
-  &--red {
-    background-color: $red-900;
-  }
+	&--red {
+		background-color: $red-900;
+	}
 
-  &--orange {
-    background-color: $orange-900;
-  }
+	&--orange {
+		background-color: $orange-900;
+	}
 }
 
 .product-status {
-  text-transform: uppercase;
-  font-size: 10px;
-  font-weight: 600;
-  line-height: 1;
+	text-transform: uppercase;
+	font-size: 10px;
+	font-weight: 600;
+	line-height: 1;
 
-  &--green {
-    color: $green-900;
-  }
+	&--green {
+		color: $green-900;
+	}
 
-  &--red {
-    color: $red-900;
-  }
+	&--red {
+		color: $red-900;
+	}
 
-  &--grey {
-    color: $silver-600;
-  }
+	&--grey {
+		color: $silver-600;
+	}
 }
 
 .stepper {
-  display: flex;
-  align-items: center;
-  user-select: none;
+	display: flex;
+	align-items: center;
+	user-select: none;
 
-  &__input {
-    width: 36px;
-    font-size: 16px;
-    line-height: 1;
-    align-items: center;
-    text-align: center;
-    color: $dark-500;
-    outline: transparent;
-    background-color: $green-100;
-  }
+	&__input {
+		width: 36px;
+		font-size: 16px;
+		line-height: 1;
+		align-items: center;
+		text-align: center;
+		color: $dark-500;
+		outline: transparent;
+		background-color: $green-100;
+	}
 
-  &__btn {
-    background-color: $green-900;
-    width: 24px;
-    height: 24px;
-    transition: opacity 0.2s;
+	&__btn {
+		background-color: $green-900;
+		width: 24px;
+		height: 24px;
+		transition: opacity 0.2s;
 
-    &--minus {
-      background-image: url(../images/elements/minus.svg);
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: inherit;
-      border-radius: 3px 0 0 3px;
-    }
+		&--minus {
+			background-image: url(../images/elements/minus.svg);
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: inherit;
+			border-radius: 3px 0 0 3px;
+		}
 
-    &--plus {
-      background-image: url(../images/elements/plus.svg);
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: inherit;
-      border-radius: 0 3px 3px 0;
-    }
+		&--plus {
+			background-image: url(../images/elements/plus.svg);
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: inherit;
+			border-radius: 0 3px 3px 0;
+		}
 
-    &:hover {
-      opacity: 0.9;
-    }
-  }
+		&:hover {
+			opacity: 0.9;
+		}
+	}
 }
 
 //BUTTONS//
 
 .btn {
-  font-size: 18px;
-  line-height: 1.3;
-  padding: 12px 24px;
-  letter-spacing: 0.03em;
-  background-color: $green-900;
-  color: $white;
-  outline: transparent;
-  transition: background-color 0.2s, box-shadow 0.2s;
-  border-radius: 6px;
-  border: 1px solid $green-900;
+	font-size: 18px;
+	line-height: 1.3;
+	padding: 12px 24px;
+	letter-spacing: 0.03em;
+	background-color: $green-900;
+	color: $white;
+	outline: transparent;
+	transition:
+		background-color 0.2s,
+		box-shadow 0.2s;
+	border-radius: 6px;
+	border: 1px solid $green-900;
 
-  &:focus {
-    box-shadow: 0 0 0 4px $green-200;
-  }
+	&:focus {
+		box-shadow: 0 0 0 4px $green-200;
+	}
 
-  &:hover {
-    background-color: $green-1000;
-  }
+	&:hover {
+		background-color: $green-1000;
+	}
 
-  &:active {
-    color: rgba($white, 0.5);
-    box-shadow: inset 0 4px 4px rgba($black, 0.25);
-  }
+	&:active {
+		color: rgba($white, 0.5);
+		box-shadow: inset 0 4px 4px rgba($black, 0.25);
+	}
 
-  &--center {
-    display: block;
-    margin: 0 auto;
-  }
+	&--center {
+		display: block;
+		margin: 0 auto;
+	}
 
-  &--transp {
-    transition: background-color 0.2s, box-shadow 0.2s;
-    background-color: $white;
-    color: $green-900;
-    display: block;
-    margin: 0 auto;
-    border-radius: 6px;
+	&--transp {
+		transition:
+			background-color 0.2s,
+			box-shadow 0.2s;
+		background-color: $white;
+		color: $green-900;
+		display: block;
+		margin: 0 auto;
+		border-radius: 6px;
 
-    &:hover {
-      background-color: #eff6e7;
-    }
+		&:hover {
+			background-color: #eff6e7;
+		}
 
-    &:focus {
-      box-shadow: 0 0 0 4px rgba($green-1000, 0.5);
-      border-radius: 6px;
-    }
+		&:focus {
+			box-shadow: 0 0 0 4px rgba($green-1000, 0.5);
+			border-radius: 6px;
+		}
 
-    &:active {
-      box-shadow: inset 0 10px 4px rgba($black, 0.1);
-      border-radius: 6px;
-      color: rgba($green-900, 0.5);
-    }
-  }
+		&:active {
+			box-shadow: inset 0 10px 4px rgba($black, 0.1);
+			border-radius: 6px;
+			color: rgba($green-900, 0.5);
+		}
+	}
 
-  &--basket {
-    width: 32px;
-    height: 32px;
-    border-radius: 3px;
-    padding: 8px;
-    position: relative;
+	&--basket {
+		width: 32px;
+		height: 32px;
+		border-radius: 3px;
+		padding: 8px;
+		position: relative;
 
-    &::before {
-      content: "";
-      background-image: url(/images/icons/icon-basket.svg);
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: contain;
-      position: absolute;
-      height: 16px;
-      width: 15px;
-      top: 25%;
-      left: 50%;
-      transform: translate(-50%);
-      transition: opacity 0.2s;
-    }
+		&::before {
+			content: '';
+			background-image: url(/images/icons/icon-basket.svg);
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: contain;
+			position: absolute;
+			height: 16px;
+			width: 15px;
+			top: 25%;
+			left: 50%;
+			transform: translate(-50%);
+			transition: opacity 0.2s;
+		}
 
-    &:hover::before {
-      opacity: 0.5;
-    }
-  }
-}
+		&:hover::before {
+			opacity: 0.5;
+		}
+	}
 
-.button-form {
-  background-color: $green-900;
-  color: $white;
-  outline: transparent;
-  transition: background-color 0.2s, box-shadow 0.2s;
-  border-radius: 0 6px 6px 0;
-  padding: 12px 16px;
-  position: absolute;
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 12px;
-  line-height: 1.3;
-
-  &:focus {
-    box-shadow: 0 0 0 4px $green-200;
-  }
-
-  &:hover {
-    background-color: $green-1000;
-  }
-
-  &:active {
-    color: rgba($white, 0.5);
-    box-shadow: inset 0 4px 4px rgba($black, 0.25);
-  }
+	&--form-email {
+		border-radius: 0 6px 6px 0;
+		padding: 13px 16px;
+		text-transform: uppercase;
+		font-weight: 700;
+		font-size: 12px;
+		line-height: 1;
+	}
 }
 
 .burger {
-  display: block;
-  position: relative;
-  width: 44px;
-  height: 44px;
+	display: block;
+	position: relative;
+	width: 44px;
+	height: 44px;
 
-  &__line,
-  &:before,
-  &:after {
-    content: "";
-    background-color: $dark-800;
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    width: 30px;
-    left: 7px;
-    transition: transform 0.4s, background-color 0.2s;
-  }
+	@include mq('tablet', min) {
+		display: none;
+	}
 
-  &:hover::before,
-  &:hover::after {
-    background-color: $green-900;
-  }
+	&__line,
+	&:before,
+	&:after {
+		content: '';
+		background-color: $dark-800;
+		position: absolute;
+		width: 100%;
+		height: 2px;
+		width: 30px;
+		left: 7px;
+		transition:
+			transform 0.4s,
+			background-color 0.2s;
 
-  &:before {
-    top: 12px;
-  }
+		@include mq('tablet', max) {
+			background-color: $white;
+		}
+	}
 
-  &:after {
-    bottom: 10px;
-  }
+	&:hover::before,
+	&:hover::after {
+		background-color: $green-900;
+	}
 
-  &--active::before {
-    transform: rotate(45deg);
-    top: 21px;
-  }
+	&:before {
+		top: 12px;
+	}
 
-  &--active::after {
-    transform: rotate(-45deg);
-    bottom: 21px;
-  }
+	&:after {
+		bottom: 10px;
+	}
 
-  &--active.burger__line {
-    transform: scale(0);
-  }
+	&--active::before {
+		transform: rotate(45deg);
+		top: 21px;
+	}
 
-  &--grey {
-    &:before,
-    &:after {
-      background-color: $silver-600;
-    }
-  }
+	&--active::after {
+		transform: rotate(-45deg);
+		bottom: 21px;
+	}
 
-  &--active-small {
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      height: 1px;
-      width: 15px;
-      transition: background-color 0.2s;
-    }
+	&--active::after,
+	&--active::before {
+		@include mq('phone', min) {
+			display: block;
+		}
 
-    &::after {
-      top: 18px;
-      left: 18px;
-    }
+		@include mq('tablet', max) {
+			background-color: $dark-800;
+		}
+	}
 
-    &::before {
-      top: 18px;
-      left: 18px;
-    }
+	&--active.burger__line {
+		transform: scale(0);
+	}
 
-    &:hover::before,
-    &:hover::after {
-      background-color: $green-900;
-    }
-  }
+	&--grey {
+		&:before,
+		&:after {
+			background-color: $silver-600;
+		}
+	}
+
+	&--active-small {
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			height: 1px;
+			width: 15px;
+			transition: background-color 0.2s;
+		}
+
+		&::after {
+			top: 18px;
+			left: 18px;
+		}
+
+		&::before {
+			top: 18px;
+			left: 18px;
+		}
+
+		&:hover::before,
+		&:hover::after {
+			background-color: $green-900;
+		}
+	}
 }
 
 //MODIFICATION
 
 .title-white {
-  font-family: $ruda;
-  font-weight: 600;
-  color: $white;
-  text-shadow: 2px 2px 0 rgba($black, 0.25);
+	font-family: $ruda;
+	font-weight: 600;
+	color: $white;
+	text-shadow: 2px 2px 0 rgba($black, 0.25);
 }
 
 .mod-white {
-  color: $white;
-  text-shadow: 1px 1px 0 rgba($black, 0.25);
+	color: $white;
+	text-shadow: 1px 1px 0 rgba($black, 0.25);
 }
 
 .link-white {
-  font-weight: 700;
-  color: $white;
-  text-shadow: 1px 1px 0 rgba($black, 0.25);
-  text-decoration: none;
+	font-weight: 700;
+	color: $white;
+	text-shadow: 1px 1px 0 rgba($black, 0.25);
+	text-decoration: none;
 }
 
 .card-big__basket--animation:active {
-  box-shadow: inset 0 4px 4px rgba($black, 0.25);
+	box-shadow: inset 0 4px 4px rgba($black, 0.25);
 }
